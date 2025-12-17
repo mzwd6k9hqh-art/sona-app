@@ -3,56 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sona Creator Control</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@whop-sdk/iframe"></script>
 </head>
 <body>
-
-  <header class="header">
-    <h1>Sona <span>Creator Control</span></h1>
-    <p>The all-in-one dashboard for Whop creators</p>
+  <header>
+    <h1 id="username">Loading...</h1>
+    <p>Creator Dashboard</p>
   </header>
 
-  <main class="dashboard">
-
+  <main>
     <section class="card">
-      <h2>Total Members</h2>
-      <p class="number">912</p>
+      <h2>Members</h2>
+      <p id="members">Loading members...</p>
     </section>
 
     <section class="card">
-      <h2>New This Week</h2>
-      <p class="number green">172</p>
-    </section>
-
-    <section class="card">
-      <h2>Inactive</h2>
-      <p class="number red">107</p>
-    </section>
-
-    <section class="card full">
       <h2>Quick Actions</h2>
-
-      <button onclick="action('Message sent to new members')">
-        Message new members
-      </button>
-
-      <button onclick="action('Weekly announcement scheduled')">
-        Schedule announcement
-      </button>
-
-      <button onclick="action('Inactive members reviewed')">
-        Review inactive members
-      </button>
-
-      <div id="output"></div>
+      <button onclick="sendMessage()">Send Message</button>
+      <button onclick="refresh()">Refresh Data</button>
     </section>
-
   </main>
-
-  <footer>
-    Built for Whop Creators • Sona
-  </footer>
 
   <script src="app.js"></script>
 </body>
