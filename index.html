@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sona Creator Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Sona <span>Creator Control</span></h1>
+    <p>The all-in-one dashboard for Whop creators</p>
+  </header>
+
+  <main class="dashboard">
+
+    <section class="card">
+      <h2>Total Members</h2>
+      <p class="number">912</p>
+    </section>
+
+    <section class="card">
+      <h2>New This Week</h2>
+      <p class="number green">172</p>
+    </section>
+
+    <section class="card">
+      <h2>Inactive</h2>
+      <p class="number red">107</p>
+    </section>
+
+    <section class="card full">
+      <h2>Quick Actions</h2>
+
+      <button onclick="action('Message sent to new members')">
+        Message new members
+      </button>
+
+      <button onclick="action('Weekly announcement scheduled')">
+        Schedule announcement
+      </button>
+
+      <button onclick="action('Inactive members reviewed')">
+        Review inactive members
+      </button>
+
+      <div id="output"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    Built for Whop Creators • Sona
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
