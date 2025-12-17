@@ -28,3 +28,30 @@ export default async function Home() {
     </main>
   );
 }
+"use client";
+import { useEffect, useState } from "react";
+
+export default function Home() {
+  const [members, setMembers] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/members")
+      .then(res => res.json())
+      .then(data => setMembers(data.data || []));
+  }, []);
+
+  return (
+    <main style={{ padding: 20 }}>
+      <h1>Sona Creator Control</h1>
+      <p>Active Members</p>
+
+      <ul>
+        {members.map((m: any) => (
+          <li key={m.id}>
+            {m.user?.name || "Unknown Member"}
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
