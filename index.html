@@ -82,3 +82,23 @@ async function loadEarnings() {
     JSON.stringify(await r.json(), null, 2);
 }
 </script>
+<h1>Sona Creator Control</h1>
+
+<button onclick="loadMembers()">Members</button>
+<button onclick="loadProducts()">Products</button>
+
+<pre id="output"></pre>
+
+<script>
+async function loadMembers(){
+  const r = await fetch("/members");
+  document.getElementById("output").textContent =
+    JSON.stringify(await r.json(), null, 2);
+}
+
+async function loadProducts(){
+  const r = await fetch("/products");
+  document.getElementById("output").textContent =
+    JSON.stringify(await r.json(), null, 2);
+}
+</script>
