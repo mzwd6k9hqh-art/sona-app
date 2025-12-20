@@ -102,3 +102,31 @@ async function loadProducts(){
     JSON.stringify(await r.json(), null, 2);
 }
 </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sona Creator Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <h2 id="username">Loading...</h2>
+
+  <section>
+    <h3>Members</h3>
+    <ul id="members"></ul>
+  </section>
+
+  <section>
+    <h3>Products</h3>
+    <ul id="products"></ul>
+  </section>
+
+  <section>
+    <h3>Earnings</h3>
+    <p id="earnings">$0</p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
