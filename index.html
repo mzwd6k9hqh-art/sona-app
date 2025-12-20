@@ -55,3 +55,30 @@
 <script src="app.js"></script>
 </body>
 </html>
+<h1>Sona Creator Control</h1>
+
+<button onclick="loadMembers()">Members</button>
+<button onclick="loadProducts()">Products</button>
+<button onclick="loadEarnings()">Earnings</button>
+
+<pre id="out"></pre>
+
+<script>
+async function loadMembers() {
+  const r = await fetch("/members");
+  document.getElementById("out").textContent =
+    JSON.stringify(await r.json(), null, 2);
+}
+
+async function loadProducts() {
+  const r = await fetch("/products");
+  document.getElementById("out").textContent =
+    JSON.stringify(await r.json(), null, 2);
+}
+
+async function loadEarnings() {
+  const r = await fetch("/earnings");
+  document.getElementById("out").textContent =
+    JSON.stringify(await r.json(), null, 2);
+}
+</script>
