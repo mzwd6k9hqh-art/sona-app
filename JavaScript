@@ -2,3 +2,31 @@ document.getElementById("actionBtn").addEventListener("click", function () {
   document.getElementById("result").innerHTML =
     "✅ App is working perfectly!";
 });
+if (window.whopUser) {
+  console.log("User ID:", window.whopUser.id);
+  console.log("Username:", window.whopUser.username);
+} else {
+  document.body.innerHTML = "Access denied ❌";
+}
+if (window.whopUser) {
+  document.querySelector(".app-container").style.display = "block";
+} else {
+  document.body.innerHTML = "<h2>You must be a member</h2>";
+}
+async function askAI() {
+  const input = document.getElementById("userInput").value;
+  const responseBox = document.getElementById("aiResponse");
+
+  responseBox.innerHTML = "Thinking... ⏳";
+
+  const res = await fetch("/api/ai", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message: input })
+  });
+
+  const data = await res.json();
+  responseBox.innerHTML = data.reply;
+}
