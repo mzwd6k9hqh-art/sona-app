@@ -159,3 +159,32 @@ async function loadProducts(){
 
   <div id="aiResponse"></div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sona AI Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+  <h1>Sona AI Dashboard</h1>
+  <p>Welcome, <span id="username">Member</span></p>
+
+  <div class="dashboard">
+    <p>Members: <span id="membersCount">0</span></p>
+    <p>Products: <span id="productsCount">0</span></p>
+  </div>
+
+  <div class="ai-box">
+    <h2>Sona AI Assistant</h2>
+    <textarea id="userInput" placeholder="Ask anything..."></textarea>
+    <button onclick="askAI()">Send</button>
+    <div id="aiResponse"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
