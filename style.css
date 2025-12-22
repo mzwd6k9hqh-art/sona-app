@@ -56,3 +56,43 @@ button {
   padding: 12px;
   border-radius: 6px;
 }
+body {
+  background: #0d0d0d;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  background: #111;
+  border: 2px solid gold;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 320px;
+}
+
+h1 {
+  color: gold;
+}
+
+button {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e6c200;
+}
+
+#result {
+  margin-top: 15px;
+}
