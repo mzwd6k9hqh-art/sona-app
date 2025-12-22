@@ -123,3 +123,55 @@ button {
 #aiResponse {
   margin-top: 15px;
 }
+body {
+  background: #0d0d0d;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 0;
+}
+
+.app-container {
+  background: #111;
+  border: 2px solid gold;
+  padding: 30px;
+  border-radius: 15px;
+  width: 360px;
+}
+
+h1, h2 {
+  color: gold;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+
+button {
+  margin-top: 10px;
+  background: gold;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e6c200;
+}
+
+#aiResponse {
+  margin-top: 15px;
+}
+
+.dashboard p {
+  margin: 5px 0;
+}
