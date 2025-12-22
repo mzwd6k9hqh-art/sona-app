@@ -1,0 +1,4 @@
+document.getElementById("actionBtn").addEventListener("click", function () {
+  document.getElementById("result").innerHTML =
+    "✅ App is working perfectly!";
+});
